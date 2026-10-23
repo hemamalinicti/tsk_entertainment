@@ -3417,6 +3417,199 @@ a:hover {
 }
 
 /* ==========================================================================
+   Responsive: 3 Gift Boxes in 1 Row on Mobile
+   ========================================================================== */
+@media (max-width: 768px) {
+  .packages-section .container {
+    padding-left: clamp(8px, 2.5vw, 16px);
+    padding-right: clamp(8px, 2.5vw, 16px);
+  }
+
+  .packages-gift-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(6px, 1.8vw, 12px);
+    align-items: stretch;
+    margin: 1.25rem auto 2rem auto;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .package-gift-box {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 185px;
+    border-radius: 14px;
+    border-width: 1.5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .package-gift-box:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  .package-gift-box.featured-box {
+    width: 100% !important;
+    height: auto !important;
+    transform: none;
+  }
+
+  .package-gift-box.featured-box:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  /* Compact 3D Gift Box Lid on Mobile */
+  .gift-box-lid {
+    height: 44px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .gift-lid-lip {
+    height: 5px;
+  }
+
+  .gift-bow-wrap {
+    top: -10px;
+    width: 44px;
+    height: 30px;
+  }
+
+  .gift-ribbon-horizontal {
+    top: 15px;
+    height: 12px;
+  }
+
+  /* Compact Gift Box Body */
+  .gift-box-body {
+    border-radius: 0 0 12px 12px;
+  }
+
+  .gift-ribbon-vertical {
+    width: 13px;
+  }
+
+  /* Featured Ribbon */
+  .gift-popular-ribbon {
+    top: -9px;
+    font-size: clamp(0.44rem, 1.4vw, 0.58rem);
+    padding: 0.15rem 0.35rem;
+    border-radius: 9999px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Sparkles on Mobile */
+  .sp-dot {
+    font-size: 0.65rem;
+  }
+
+  .sp-1 { top: 6px; left: 6px; }
+  .sp-2 { top: 16px; right: 8px; font-size: 0.75rem; }
+  .sp-3 { bottom: 8px; left: 8px; font-size: 0.6rem; }
+
+  /* Transparent Tag on Mobile */
+  .gift-box-transparent-tag {
+    bottom: 6px;
+    left: 4px;
+    right: 4px;
+    padding: 0.35rem 0.2rem 0.45rem 0.2rem;
+    border-radius: 9px;
+  }
+
+  .gift-tag-badge {
+    font-size: clamp(0.44rem, 1.4vw, 0.52rem);
+    padding: 0.08rem 0.25rem;
+    border-radius: 4px;
+    margin-bottom: 0.1rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .gift-tag-title {
+    font-size: clamp(0.72rem, 2.3vw, 0.85rem);
+    line-height: 1.15;
+    margin: 0.08rem 0;
+    word-break: break-word;
+  }
+
+  .gift-tag-sub {
+    font-size: clamp(0.52rem, 1.7vw, 0.62rem);
+    margin: 0.08rem 0 0.25rem 0;
+    white-space: nowrap;
+  }
+
+  .gift-tag-btn {
+    font-size: clamp(0.48rem, 1.6vw, 0.6rem);
+    padding: 0.2rem 0.35rem;
+    border-radius: 7px;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+  }
+}
+
+@media (max-width: 380px) {
+  .packages-gift-row {
+    gap: 4px;
+  }
+
+  .package-gift-box {
+    min-height: 172px;
+    border-radius: 11px;
+  }
+
+  .gift-box-lid {
+    height: 38px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .gift-box-body {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .gift-bow-wrap {
+    top: -8px;
+    width: 36px;
+    height: 25px;
+  }
+
+  .gift-ribbon-horizontal {
+    top: 13px;
+    height: 10px;
+  }
+
+  .gift-ribbon-vertical {
+    width: 10px;
+  }
+
+  .gift-box-transparent-tag {
+    left: 2px;
+    right: 2px;
+    bottom: 4px;
+    padding: 0.25rem 0.15rem;
+  }
+
+  .gift-tag-title {
+    font-size: 0.68rem;
+  }
+
+  .gift-tag-sub {
+    font-size: 0.48rem;
+  }
+
+  .gift-tag-btn {
+    font-size: 0.46rem;
+    padding: 0.15rem 0.25rem;
+  }
+
+  .gift-popular-ribbon {
+    font-size: 0.42rem;
+    padding: 0.1rem 0.25rem;
+  }
+}
+
+/* ==========================================================================
    Blast Animation Mechanics
    ========================================================================== */
 
@@ -5934,6 +6127,11 @@ body.contact-page .site-footer .footer-legal-links a {
 /* ==========================================================================
    Plan My Event Mobile Responsive Optimizations (< 992px & < 768px)
    ========================================================================== */
+/* Hide floating WhatsApp button on Planner page to prevent blocking form controls & summary card */
+body.planner-page .floating-whatsapp {
+  display: none !important;
+}
+
 @media (max-width: 991px) {
   .planner-layout {
     gap: 1.25rem;
@@ -5941,13 +6139,16 @@ body.contact-page .site-footer .footer-legal-links a {
 
   .planner-summary-card {
     position: static;
-    padding: 1rem 1.15rem;
+    padding: 1.15rem 1.25rem;
+    border-radius: 14px;
+    margin-top: 1.25rem;
   }
 
   .planner-summary-header {
     padding-bottom: 0;
     margin-bottom: 0;
     border-bottom: none;
+    gap: 0.75rem;
   }
 
   .planner-summary-card.is-open .planner-summary-header {
@@ -5971,6 +6172,8 @@ body.contact-page .site-footer .footer-legal-links a {
     cursor: pointer;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .summary-mobile-toggle-btn:hover {
@@ -6009,11 +6212,22 @@ body.contact-page .site-footer .footer-legal-links a {
     padding-bottom: var(--spacing-xl);
   }
 
-  /* Stepper on Mobile */
+  /* Unified Stepper Container on Mobile */
+  .planner-stepper-container {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 1.15rem;
+    box-shadow: var(--shadow-sm);
+  }
+
   .planner-stepper {
-    padding: 0.65rem 0.75rem;
-    margin-bottom: 0.5rem;
-    border-radius: 12px;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 0.75rem 0.85rem;
   }
 
   .stepper-step {
@@ -6036,8 +6250,14 @@ body.contact-page .site-footer .footer-legal-links a {
   }
 
   .stepper-progress-bar-wrap {
-    height: 5px;
-    margin-bottom: 1rem;
+    height: 4px;
+    margin-bottom: 0;
+    border-radius: 0;
+    background: rgba(142, 27, 46, 0.08);
+  }
+
+  .stepper-progress-bar {
+    border-radius: 0;
   }
 
   /* Cards on Mobile */
@@ -6176,6 +6396,30 @@ body.contact-page .site-footer .footer-legal-links a {
     padding: 0.75rem 1rem;
     font-size: 0.92rem;
     border-radius: var(--radius-btn);
+  }
+}
+
+/* On phones under 500px, stack Step 4 navigation buttons so WhatsApp button is full width */
+@media (max-width: 500px) {
+  .planner-step-card:not([data-step="1"]) .planner-step-nav {
+    flex-direction: column-reverse;
+    gap: 0.65rem;
+    align-items: stretch;
+  }
+
+  .planner-step-card:not([data-step="1"]) .btn-prev-step {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    order: 2;
+  }
+
+  .planner-step-card:not([data-step="1"]) .btn-next-step,
+  .planner-step-card:not([data-step="1"]) .btn-whatsapp-submit {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    order: 1;
   }
 }
 
