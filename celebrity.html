@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celebrity Management | TSK Entertainments - Artists, Performers &amp; VIPs</title>
+  <meta name="description" content="Professional celebrity management services in Tamil Nadu: Kollywood stars, musical playback singers, celebrity anchors, wedding DJs, and dance troupes with direct WhatsApp booking.">
+  <meta name="theme-color" content="#fbf6ec">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Shared Header (Injected via js/script.js) -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Main Content Container -->
+  <main id="main-content" class="main-content">
+
+    <!-- 1. Page Hero / Header -->
+    <div class="container">
+      <section class="page-hero" aria-labelledby="celebrity-hero-title">
+        <span class="badge badge-primary">Star-Studded Celebrations</span>
+        <h1 id="celebrity-hero-title" class="page-hero-title">Celebrity &amp; Artist Management</h1>
+        <p class="page-hero-desc">
+          Add glamour, rhythm, and unforgettable star power to your grand occasions. We manage direct talent procurement, technical riders, VIP security, and stage coordination across Tamil Nadu.
+        </p>
+      </section>
+    </div>
+
+    <!-- 2. Artists Showcase Section (Category Tabs + Grid) -->
+    <section class="section celebrity-section" aria-label="Artists and Performers Roster">
+      <div class="container">
+
+        <!-- Category Tabs -->
+        <div class="artist-tabs-bar" role="tablist" aria-label="Filter artists by category">
+          <button type="button" class="artist-tab-btn active" role="tab" data-category="all" aria-pressed="true" aria-selected="true">All Artists</button>
+          <button type="button" class="artist-tab-btn" role="tab" data-category="singers" aria-pressed="false" aria-selected="false">Singers</button>
+          <button type="button" class="artist-tab-btn" role="tab" data-category="anchors" aria-pressed="false" aria-selected="false">Anchors</button>
+          <button type="button" class="artist-tab-btn" role="tab" data-category="djs" aria-pressed="false" aria-selected="false">DJs</button>
+          <button type="button" class="artist-tab-btn" role="tab" data-category="dancers" aria-pressed="false" aria-selected="false">Dancers</button>
+        </div>
+
+        <!-- Dynamic Artists Grid (Populated via js/script.js) -->
+        <div id="artists-grid" class="artists-grid" aria-live="polite">
+          <!-- Artist cards rendered dynamically from ARTISTS_DATA array -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Interactive Request Booking Modal Dialog -->
+    <dialog id="booking-modal" class="booking-modal" closedby="any" aria-label="Request Artist Booking" aria-modal="true">
+      <div class="booking-modal-header">
+        <img id="booking-artist-avatar" class="booking-artist-avatar" src="images/hero-celebrity.svg" alt="Selected Artist Avatar">
+        <div class="booking-header-text">
+          <h2 id="booking-artist-heading" class="booking-modal-title">Request Booking</h2>
+          <span id="booking-artist-sub" class="booking-modal-sub">Direct WhatsApp Booking Liaison</span>
+        </div>
+        <button type="button" id="booking-modal-close" class="booking-modal-close" aria-label="Close booking modal" title="Close (Escape)">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+      </div>
+
+      <form id="booking-modal-form" class="booking-modal-body">
+        <input type="hidden" id="booking-artist-name" name="artist_name" value="">
+
+        <div class="form-group">
+          <label for="client-name" class="form-label">Your Full Name *</label>
+          <input type="text" id="client-name" name="client_name" class="form-input" placeholder="e.g. Karthikeyan S." required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="client-phone" class="form-label">Phone / WhatsApp Number *</label>
+          <input type="tel" id="client-phone" name="client_phone" class="form-input" placeholder="e.g. +91 98765 43210" required autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="event-date" class="form-label">Event Date *</label>
+          <input type="date" id="event-date" name="event_date" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="event-type" class="form-label">Event Type *</label>
+          <select id="event-type" name="event_type" class="form-select" required>
+            <option value="" disabled selected>Select event category</option>
+            <option value="Wedding / Reception">Wedding / Reception</option>
+            <option value="Sangeet / Musical Night">Sangeet / Musical Night</option>
+            <option value="Corporate Summit / Gala">Corporate Summit / Gala</option>
+            <option value="Milestone Birthday (Sashti Apthapoorthi / 60th)">Milestone Birthday (60th / 80th)</option>
+            <option value="College Fest / Public Concert">College Fest / Public Concert</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="booking-message" class="form-label">Venue Location &amp; Special Notes</label>
+          <textarea id="booking-message" name="message" class="form-textarea" placeholder="e.g. Wedding reception in Chennai, evening slot from 7:00 PM to 9:30 PM."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp-submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.82 14.07c-.24.68-1.22 1.28-1.7 1.34-.45.06-1.02.08-1.64-.12-.38-.12-.87-.29-1.5-.56-2.65-1.15-4.38-3.83-4.51-4.01-.13-.18-1.09-1.45-1.09-2.76 0-1.31.69-1.96.93-2.22.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.39-.06.61.47.23.54.78 1.91.85 2.05.07.14.12.31.02.49-.09.18-.14.29-.28.45-.14.16-.3.35-.42.47-.14.14-.29.3-.13.58.17.29.74 1.22 1.6 1.98 1.1 0.98 2.03 1.29 2.32 1.43.29.14.45.12.62-.07.17-.2.72-.84.91-1.13.2-.29.39-.24.66-.14.27.1.1.72 1.02 1.18.23.11.45.17.65.23.2.06.39.11.46.23.07.12.07.7-.17 1.38z"/>
+          </svg>
+          <span>Send Booking Request via WhatsApp</span>
+        </button>
+
+        <p class="booking-note">
+          Opens WhatsApp with pre-filled event details directly to our management team (+91 6383180073).
+        </p>
+      </form>
+    </dialog>
+
+    <!-- 4. "How Booking Works" 3-Step Process Section -->
+    <section class="section how-booking-works-section" aria-labelledby="how-booking-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Transparent Management</span>
+          <h2 id="how-booking-heading">How Celebrity Booking Works</h2>
+          <p>From initial inquiry to live stage performance, our structured 3-step process ensures complete clarity, zero middleman markups, and effortless coordination.</p>
+        </div>
+
+        <div class="booking-steps-grid">
+          <!-- Step 1 -->
+          <article class="booking-step-card">
+            <span class="booking-step-pill">Step 01</span>
+            <h3>1. Select &amp; Check Availability</h3>
+            <p>
+              Choose your preferred singer, anchor, DJ, or dance troupe from our roster, or request any Kollywood celebrity. Our team directly contacts artist management to verify live tour dates, travel feasibility, and preliminary fees within 24 hours.
+            </p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="booking-step-card">
+            <span class="booking-step-pill">Step 02</span>
+            <h3>2. Contract &amp; Rider Alignment</h3>
+            <p>
+              Once confirmed, we draw transparent commercial agreements with zero hidden agency costs. We handle complete technical sound riders, stage acoustic requirements, lighting cues, and green-room hospitality arrangements seamlessly.
+            </p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="booking-step-card">
+            <span class="booking-step-pill">Step 03</span>
+            <h3>3. Flawless VIP Delivery</h3>
+            <p>
+              On the celebration day, our dedicated talent liaison and security team coordinate punctual artist arrival, sound checks, green room comfort, and stage cues—ensuring an electrifying, hassle-free performance for your guests.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Final Call-to-Action (CTA) Band (Matches Home Page) -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-box">
+          <span class="badge badge-primary">Get in Touch</span>
+          <h2 id="cta-heading">Looking for a Specific Celebrity or Artist?</h2>
+          <p>
+            Have a specific Kollywood actor, playback singer, or musical troupe in mind not listed here? We have direct relationships across the Tamil film &amp; entertainment industry.
+          </p>
+          <div class="cta-box-buttons">
+            <a href="https://wa.me/916383180073?text=Hi%20TSK%20Entertainments,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20celebrity%20artist%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Inquire on WhatsApp</a>
+            <a href="tel:6383180073" class="btn btn-secondary">Call +91 6383180073</a>
+            <a href="contact.html" class="btn btn-accent">Send an Email</a>
+          </div>
+          <div class="cta-contact-direct">
+            <span>Direct Bookings: <strong>+91 6383180073</strong> &bull; Instagram: <strong>@tskentertainments</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer (Injected via js/script.js) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared Logic & Component Injector -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

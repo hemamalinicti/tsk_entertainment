@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgSolutions" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4d3a"/>
+      <stop offset="50%" stop-color="#173b2c"/>
+      <stop offset="100%" stop-color="#0a1a13"/>
+    </linearGradient>
+    <linearGradient id="goldGradSol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe28a"/>
+      <stop offset="50%" stop-color="#e8a317"/>
+      <stop offset="100%" stop-color="#b27500"/>
+    </linearGradient>
+    <linearGradient id="glowSol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffd56b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="560" rx="20" fill="url(#bgSolutions)"/>
+
+  <!-- Geometric Grid & Production Waveform -->
+  <g opacity="0.1" stroke="#ffffff" stroke-width="1.2">
+    <circle cx="200" cy="230" r="140" fill="none"/>
+    <circle cx="200" cy="230" r="90" fill="none"/>
+    <line x1="40" y1="230" x2="360" y2="230"/>
+    <line x1="200" y1="70" x2="200" y2="390"/>
+  </g>
+
+  <!-- Central Production Shield / 360 Ecosystem Emblem -->
+  <g transform="translate(200, 220)">
+    <!-- Outer Golden Ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="url(#goldGradSol)" stroke-width="3" stroke-dasharray="12,6"/>
+    <circle cx="0" cy="0" r="95" fill="rgba(255,255,255,0.06)"/>
+
+    <!-- Four Pillars of Production: Audio, Lighting, Visuals, Hospitality -->
+    
+    <!-- Top: Stage Lights / Trusses -->
+    <g transform="translate(0, -55)">
+      <polygon points="-18,-8 18,-8 12,12 -12,12" fill="url(#goldGradSol)"/>
+      <line x1="-12" y1="12" x2="-24" y2="35" stroke="#ffd56b" stroke-width="2" opacity="0.7"/>
+      <line x1="12" y1="12" x2="24" y2="35" stroke="#ffd56b" stroke-width="2" opacity="0.7"/>
+      <circle cx="0" cy="2" r="5" fill="#ffffff"/>
+    </g>
+
+    <!-- Bottom: Pro Audio & Line Array -->
+    <g transform="translate(0, 55)">
+      <rect x="-18" y="-12" width="36" height="24" rx="4" fill="#2a1418" stroke="url(#goldGradSol)" stroke-width="1.5"/>
+      <circle cx="-7" cy="0" r="6" fill="none" stroke="#ffd56b" stroke-width="1.5"/>
+      <circle cx="7" cy="0" r="6" fill="none" stroke="#ffd56b" stroke-width="1.5"/>
+    </g>
+
+    <!-- Left: Cinema Camera / Photography -->
+    <g transform="translate(-55, 0)">
+      <rect x="-14" y="-10" width="28" height="20" rx="3" fill="url(#goldGradSol)"/>
+      <polygon points="14,-5 24,-12 24,12 14,5" fill="#ffd56b"/>
+      <circle cx="0" cy="0" r="5" fill="#2a1418"/>
+    </g>
+
+    <!-- Right: Guest Hospitality & Banqueting -->
+    <g transform="translate(55, 0)">
+      <path d="M-12,8 Q0,-16 12,8 Z" fill="url(#goldGradSol)"/>
+      <circle cx="0" cy="-6" r="6" fill="#ffd56b"/>
+      <line x1="-14" y1="8" x2="14" y2="8" stroke="#ffd56b" stroke-width="2"/>
+    </g>
+
+    <!-- Center Core: TSK 360 Emblem -->
+    <circle cx="0" cy="0" r="26" fill="#8e1b2e" stroke="url(#goldGradSol)" stroke-width="2"/>
+    <text x="0" y="6" fill="#ffffff" font-family="'Fraunces', serif" font-size="16" font-weight="700" text-anchor="middle">360°</text>
+  </g>
+
+  <!-- Tag Pill -->
+  <rect x="30" y="32" width="168" height="32" rx="16" fill="rgba(255,255,255,0.18)" backdrop-filter="blur(4px)"/>
+  <text x="114" y="52" fill="#ffffff" font-family="'Karla', sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">COMPLETE SOLUTIONS</text>
+
+  <!-- Caption text -->
+  <text x="32" y="475" fill="url(#goldGradSol)" font-family="'Fraunces', serif" font-size="24" font-weight="700">Full-Service Event</text>
+  <text x="32" y="505" fill="#ffffff" font-family="'Fraunces', serif" font-size="24" font-weight="700">Production &amp; Logistics</text>
+  <text x="32" y="530" fill="rgba(255,255,255,0.75)" font-family="'Karla', sans-serif" font-size="14">Sound, Lighting, Hospitality &amp; Permissions</text>
+</svg>

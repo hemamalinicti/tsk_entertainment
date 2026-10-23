@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TSK Entertainments | Premier Event Planning & Celebrations in Tamil Nadu</title>
+  <meta name="description" content="TSK Entertainments - Your day, planned down to the last garland. Weddings, décor, birthdays, corporate events, and celebrity management across Tamil Nadu.">
+  <meta name="theme-color" content="#fbf6ec">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload Critical Hero Media (Instant First-Paint Poster & Fast Stream) -->
+  <link rel="preload" as="image" href="images/hero-video-poster.webp" fetchpriority="high">
+  <link rel="preload" as="video" href="images/hero-wedding-optimized.mp4" type="video/mp4">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Shared Header (Injected via js/script.js) -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Main Content Container -->
+  <main id="main-content" class="main-content">
+    
+    <!-- 1. Hero Section with Background Video & Guaranteed Contrast -->
+    <section class="hero-video-section" aria-labelledby="hero-heading">
+      <!-- Background Video Container -->
+      <div class="hero-video-wrapper">
+        <video id="hero-bg-video" class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero-video-poster.jpg">
+          <source src="images/hero-wedding-optimized.mp4" type="video/mp4">
+          <source src="images/gemini_generated_video_2e7fee6f_gwr_video_mvp.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <!-- Directional Contrast Scrim Overlay: Keeps video clearly visible on right, protects text on left -->
+        <div class="hero-video-scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero-video-container">
+        <div class="hero-video-grid">
+          <!-- Center-Aligned Transparent Content (Video flows freely behind) -->
+          <div class="hero-content-transparent">
+            <span class="badge badge-hero-video">Event Planning &bull; Tamil Nadu</span>
+            
+            <h1 id="hero-heading" class="hero-title-video">
+              <span class="hero-line"><span class="hero-line-inner">Your day,</span></span>
+              <span class="hero-line"><span class="hero-line-inner">planned down to</span></span>
+              <span class="hero-line"><span class="hero-line-inner highlight-gold">the last garland.</span></span>
+            </h1>
+
+            <p class="hero-subtitle-video">
+              From sacred muhurthams to unforgettable celebrations, we design, manage, and coordinate every detail with heart and precision across Tamil Nadu.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="plan-my-event.html" class="btn btn-hero-cta">Plan My Event</a>
+              <a href="gallery.html" class="btn btn-hero-secondary">See our work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Stats Bar (Integrated directly at the bottom of the hero section) -->
+      <div class="hero-stats-band" aria-label="Company achievements and statistics">
+        <div class="container">
+          <div class="stats-grid">
+            <!-- Counter 1: Events Planned -->
+            <div class="stat-item">
+              <div class="stat-value stat-counter" data-target="500" data-suffix="+">0+</div>
+              <div class="stat-label">Events Planned</div>
+              <div class="stat-sublabel">Weddings &amp; Galas</div>
+            </div>
+
+            <!-- Counter 2: Years of Experience -->
+            <div class="stat-item">
+              <div class="stat-value stat-counter" data-target="12" data-suffix="+">0+</div>
+              <div class="stat-label">Years Experience</div>
+              <div class="stat-sublabel">Proven Track Record</div>
+            </div>
+
+            <!-- Counter 3: Client Focus -->
+            <div class="stat-item">
+              <div class="stat-value stat-counter" data-target="100" data-suffix="%">0%</div>
+              <div class="stat-label">Client Focus</div>
+              <div class="stat-sublabel">Dedicated Coordination</div>
+            </div>
+
+            <!-- Counter 4: One Team for Everything -->
+            <div class="stat-item">
+              <div class="stat-value stat-counter" data-target="1" data-suffix="">0</div>
+              <div class="stat-label">Team for Everything</div>
+              <div class="stat-sublabel">Zero Middlemen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. "What We Do" Section -->
+    <section class="section what-we-do-section" aria-labelledby="services-heading">
+      <div class="container">
+        <!-- Section Header: Left-aligned title + Right-aligned CTA button -->
+        <div class="what-we-do-header">
+          <div class="what-we-do-header-left">
+            <span class="badge badge-hero-video">What We Do</span>
+            <h2 id="services-heading" class="what-we-do-title">Complete Event Solutions for Every Milestone</h2>
+            <p class="what-we-do-subtitle">We take care of every moving part so you can relax and truly enjoy your special celebration.</p>
+          </div>
+          <div class="what-we-do-header-right">
+            <a href="services-packages.html" class="btn btn-hero-cta">View all services &rarr;</a>
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Weddings -->
+          <article class="service-card" id="card-weddings">
+            <div class="service-card-media">
+              <img src="images/service-weddings.webp" alt="Luxury Wedding Reception Stage with Floral Arch and Ambient Lighting" width="736" height="589" loading="lazy">
+              <span class="service-media-tag">Weddings</span>
+            </div>
+            
+            <div class="service-card-top">
+              <h3 class="service-card-title">Weddings</h3>
+              <button type="button" class="service-details-toggle" aria-expanded="false" aria-controls="details-weddings" id="toggle-weddings">
+                <span class="toggle-label">View details</span>
+                <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="service-card-details" id="details-weddings" role="region" aria-labelledby="toggle-weddings" hidden>
+              <div class="service-card-details-inner">
+                <p>
+                  Authentic Tamil rituals, bridal entries, muhurtham timelines, and end-to-end guest hospitality planned with devotion and perfection.
+                </p>
+                <a href="services-packages.html#weddings" class="service-card-link">
+                  <span>Explore Weddings</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Décor -->
+          <article class="service-card" id="card-decor">
+            <div class="service-card-media">
+              <img src="images/service-decor.webp" alt="Grand Red and White Floral Canopy Walkway Entrance" width="520" height="972" loading="lazy">
+              <span class="service-media-tag">Décor</span>
+            </div>
+            
+            <div class="service-card-top">
+              <h3 class="service-card-title">Décor</h3>
+              <button type="button" class="service-details-toggle" aria-expanded="false" aria-controls="details-decor" id="toggle-decor">
+                <span class="toggle-label">View details</span>
+                <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="service-card-details" id="details-decor" role="region" aria-labelledby="toggle-decor" hidden>
+              <div class="service-card-details-inner">
+                <p>
+                  Royal floral mandaps, thematic backdrops, atmospheric ambient lighting, and bespoke photo zones crafted to leave a lasting impression.
+                </p>
+                <a href="services-packages.html#decor" class="service-card-link">
+                  <span>Explore Décor</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Celebrity Management -->
+          <article class="service-card" id="card-celebrity">
+            <div class="service-card-media">
+              <img src="images/service-celebrity.webp" alt="Grand Live Arena Stage with LED Video Walls and Concert Lighting" width="1024" height="1024" loading="lazy">
+              <span class="service-media-tag">Celebrity</span>
+            </div>
+            
+            <div class="service-card-top">
+              <h3 class="service-card-title">Celebrity Management</h3>
+              <button type="button" class="service-details-toggle" aria-expanded="false" aria-controls="details-celebrity" id="toggle-celebrity">
+                <span class="toggle-label">View details</span>
+                <svg class="toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="service-card-details" id="details-celebrity" role="region" aria-labelledby="toggle-celebrity" hidden>
+              <div class="service-card-details-inner">
+                <p>
+                  Kollywood star appearances, live playback music bands, standup comedians, anchors, and VIP management handled with complete confidentiality.
+                </p>
+                <a href="services-packages.html#celebrity" class="service-card-link">
+                  <span>Explore Celebrities</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 4. Final Call-to-Action (CTA) Band -->
+    <section class="section cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-ambient-sheen" aria-hidden="true"></div>
+          <div class="cta-glitters" aria-hidden="true">
+            <span class="glitter-sparkle" style="top: 14%; left: 9%; width: 22px; height: 22px; --dur: 4.2s; --delay: -1.2s; --drift-x: 14px; --drift-y: -28px;">
+              <svg viewBox="0 0 24 24"><defs><radialGradient id="glStarH1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="25%" stop-color="#fff0aa"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></radialGradient></defs><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="url(#glStarH1)"/><circle cx="12" cy="12" r="2.2" fill="#ffffff"/></svg>
+            </span>
+            <span class="glitter-sparkle" style="top: 18%; right: 11%; width: 26px; height: 26px; --dur: 5s; --delay: -2.8s; --drift-x: -18px; --drift-y: -34px;">
+              <svg viewBox="0 0 24 24"><defs><radialGradient id="glStarH2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="28%" stop-color="#fff2b2"/><stop offset="65%" stop-color="#e8a317"/><stop offset="100%" stop-color="#92400e"/></radialGradient></defs><path d="M12 0 C12 6 18 12 24 12 C18 12 12 18 12 24 C12 18 6 12 0 12 C6 12 12 6 12 0 Z" fill="url(#glStarH2)"/><path d="M12 3.8 C12 7.8 16 12 20.2 12 C16 12 12 16.2 12 20.2 C12 16.2 7.8 12 3.8 12 C7.8 12 12 7.8 12 3.8 Z" fill="url(#glStarH2)" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="2.4" fill="#ffffff"/></svg>
+            </span>
+            <span class="glitter-orb" style="top: 32%; left: 16%; width: 8px; height: 8px; --dur: 4.4s; --delay: -0.9s; --drift-x: 10px; --drift-y: -22px;"></span>
+            <span class="glitter-orb" style="top: 28%; right: 18%; width: 7px; height: 7px; --dur: 3.8s; --delay: -1.7s; --drift-x: -12px; --drift-y: -26px;"></span>
+            <span class="glitter-sparkle" style="top: 72%; left: 10%; width: 20px; height: 20px; --dur: 4.8s; --delay: -3.4s; --drift-x: 12px; --drift-y: -28px;">
+              <svg viewBox="0 0 24 24"><defs><radialGradient id="glStarH3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="25%" stop-color="#fff0aa"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/></radialGradient></defs><path d="M12 0 C12 6.6 17.4 12 24 12 C17.4 12 12 17.4 12 24 C12 17.4 6.6 12 0 12 C6.6 12 12 6.6 12 0 Z" fill="url(#glStarH3)"/><circle cx="12" cy="12" r="2.2" fill="#ffffff"/></svg>
+            </span>
+            <span class="glitter-sparkle" style="top: 74%; right: 12%; width: 24px; height: 24px; --dur: 5.2s; --delay: -1.6s; --drift-x: -15px; --drift-y: -30px;">
+              <svg viewBox="0 0 24 24"><defs><radialGradient id="glStarH4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="28%" stop-color="#fff2b2"/><stop offset="65%" stop-color="#e8a317"/><stop offset="100%" stop-color="#92400e"/></radialGradient></defs><path d="M12 0 C12 6 18 12 24 12 C18 12 12 18 12 24 C12 18 6 12 0 12 C6 12 12 6 12 0 Z" fill="url(#glStarH4)"/><path d="M12 3.8 C12 7.8 16 12 20.2 12 C16 12 12 16.2 12 20.2 C12 16.2 7.8 12 3.8 12 C7.8 12 12 7.8 12 3.8 Z" fill="url(#glStarH4)" transform="rotate(45 12 12)"/><circle cx="12" cy="12" r="2.4" fill="#ffffff"/></svg>
+            </span>
+            <span class="glitter-orb" style="top: 80%; left: 24%; width: 6px; height: 6px; --dur: 4.1s; --delay: -2.3s; --drift-x: 8px; --drift-y: -20px;"></span>
+            <span class="glitter-orb" style="top: 78%; right: 28%; width: 8px; height: 8px; --dur: 4.6s; --delay: -3.1s; --drift-x: -10px; --drift-y: -24px;"></span>
+          </div>
+          <span class="badge badge-primary">Get in Touch</span>
+          <h2 id="cta-heading">Ready to Plan an Extraordinary Celebration?</h2>
+          <p>
+            Tell us about your event date, preferred city in Tamil Nadu, and vision. We will create a custom proposal and quotation tailored for you.
+          </p>
+          <div class="cta-box-buttons">
+            <a href="plan-my-event.html" class="btn btn-primary">Plan My Event</a>
+            <a href="tel:6383180073" class="btn btn-secondary">Call +91 6383180073</a>
+            <a href="https://wa.me/916383180073" target="_blank" rel="noopener noreferrer" class="btn btn-accent">WhatsApp Us</a>
+          </div>
+          <div class="cta-contact-direct">
+            <span>Direct Bookings: <strong>+91 6383180073</strong> &bull; Instagram: <strong>@tskentertainments</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section class="section testimonials-section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Testimonials</span>
+          <h2 id="testimonials-heading">What Our Clients Say</h2>
+          <p>Real stories and sincere words from families and organizers who trusted us with their big day.</p>
+        </div>
+
+        <div class="testimonials-slider-wrap" role="region" aria-roledescription="carousel" aria-label="Client Testimonials">
+          <!-- Slider Track Container -->
+          <div class="testimonials-slider-viewport">
+            <div class="testimonials-track" id="testimonials-track">
+              <!-- Review 1 -->
+              <div class="testimonial-slide active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                <article class="testimonial-card">
+                  <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                  <p class="testimonial-text">
+                    &ldquo;TSK Entertainments planned our wedding in Chennai down to the last garland. The mandap was breathtaking and the hospitality for 800 guests was effortless.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">K</div>
+                    <div class="author-details">
+                      <span class="author-name">Karthik &amp; Soundarya</span>
+                      <span class="author-event">Traditional Wedding &bull; Chennai</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                <article class="testimonial-card">
+                  <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                  <p class="testimonial-text">
+                    &ldquo;The stage lighting and celebrity artist appearance made our sangeet reception unforgettable. Everything ran strictly on schedule without a hitch.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">P</div>
+                    <div class="author-details">
+                      <span class="author-name">Praveen &amp; Divya</span>
+                      <span class="author-event">Sangeet &amp; Reception &bull; Coimbatore</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                <article class="testimonial-card">
+                  <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                  <p class="testimonial-text">
+                    &ldquo;We booked TSK for my father's 60th milestone birthday. Their attention to traditional rituals, family comfort, and audio setup was truly heartwarming.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">A</div>
+                    <div class="author-details">
+                      <span class="author-name">Anand Natarajan</span>
+                      <span class="author-event">Milestone Birthday &bull; Madurai</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="testimonial-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                <article class="testimonial-card">
+                  <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  </div>
+                  <p class="testimonial-text">
+                    &ldquo;From the magnificent floral nadaswaram pathway to seamless VIP coordination, the TSK team managed our 1,200 guests with poise and royal perfection.&rdquo;
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-avatar" aria-hidden="true">M</div>
+                    <div class="author-details">
+                      <span class="author-name">Meenakshi &amp; Senthil</span>
+                      <span class="author-event">Grand Wedding &bull; Trichy</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls: Prev / Next Buttons & Indicators -->
+          <div class="testimonials-controls">
+            <button type="button" class="testimonial-nav-btn prev-btn" id="testimonial-prev-btn" aria-label="Previous Review">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+            </button>
+
+            <!-- Dots Indicator -->
+            <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Choose review to display"></div>
+
+            <button type="button" class="testimonial-nav-btn next-btn" id="testimonial-next-btn" aria-label="Next Review">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer (Injected via js/script.js) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared Logic & Component Injector -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

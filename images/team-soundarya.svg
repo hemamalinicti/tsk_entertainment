@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf9f2"/>
+      <stop offset="50%" stop-color="#fcf4e4"/>
+      <stop offset="100%" stop-color="#faeccb"/>
+    </linearGradient>
+    <linearGradient id="goldBorder2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#e8a317"/>
+      <stop offset="100%" stop-color="#8b5b00"/>
+    </linearGradient>
+    <linearGradient id="sareeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8a317"/>
+      <stop offset="60%" stop-color="#b27500"/>
+      <stop offset="100%" stop-color="#1f4d3a"/>
+    </linearGradient>
+    <clipPath id="circleClip2">
+      <circle cx="160" cy="160" r="140"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer Ring with Gold Accent -->
+  <circle cx="160" cy="160" r="150" fill="none" stroke="url(#goldBorder2)" stroke-width="4"/>
+  <circle cx="160" cy="160" r="144" fill="none" stroke="#ffffff" stroke-width="3"/>
+
+  <!-- Clipped Avatar Content -->
+  <g clip-path="url(#circleClip2)">
+    <!-- Background Circle -->
+    <rect width="320" height="320" fill="url(#avatarBg2)"/>
+
+    <!-- Subtle Floral Motif in Background -->
+    <g opacity="0.3" stroke="#e8a317" stroke-width="1.5" fill="none">
+      <circle cx="160" cy="110" r="28"/>
+      <circle cx="160" cy="110" r="18"/>
+    </g>
+
+    <!-- Silk Saree & Pallu with Rich Border -->
+    <path d="M75,320 L90,240 Q160,230 230,240 L245,320 Z" fill="url(#sareeGrad)"/>
+    <!-- Pleated Pallu Draped Across -->
+    <path d="M90,240 L160,320 L200,320 L130,235 Z" fill="#8e1b2e"/>
+    <line x1="120" y1="237" x2="185" y2="320" stroke="#ffd56b" stroke-width="3"/>
+    <line x1="126" y1="237" x2="192" y2="320" stroke="#e8a317" stroke-width="1.5"/>
+
+    <!-- Gold Temple Necklace / Haram -->
+    <path d="M135,215 Q160,238 185,215" fill="none" stroke="#e8a317" stroke-width="3.5"/>
+    <circle cx="160" cy="232" r="4.5" fill="#ffd56b"/>
+
+    <!-- Neck & Face -->
+    <rect x="144" y="180" width="32" height="40" rx="8" fill="#e0b08e"/>
+    <ellipse cx="160" cy="148" rx="44" ry="52" fill="#f0be97"/>
+
+    <!-- Elegant Hair Bun with Jasmine Flowers (Malli Poo) -->
+    <ellipse cx="160" cy="98" rx="52" ry="34" fill="#2a1418"/>
+    <!-- Jasmine Flowers Garland on Hair -->
+    <path d="M116,108 Q160,82 204,108" fill="none" stroke="#ffffff" stroke-width="6" stroke-dasharray="6,4"/>
+    <circle cx="120" cy="110" r="4" fill="#ffffff"/>
+    <circle cx="132" cy="100" r="4.5" fill="#ffd56b"/>
+    <circle cx="146" cy="94" r="4.5" fill="#ffffff"/>
+    <circle cx="160" cy="92" r="5" fill="#ffd56b"/>
+    <circle cx="174" cy="94" r="4.5" fill="#ffffff"/>
+    <circle cx="188" cy="100" r="4.5" fill="#ffd56b"/>
+    <circle cx="200" cy="110" r="4" fill="#ffffff"/>
+
+    <!-- Hair side drapes -->
+    <path d="M116,140 C114,105 130,105 160,105 C190,105 206,105 204,140 C204,124 190,112 160,112 C130,112 116,124 116,140 Z" fill="#2a1418"/>
+
+    <!-- Eyebrows & Expressive Eyes -->
+    <path d="M132,135 Q143,130 150,136" stroke="#2a1418" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M170,136 Q177,130 188,135" stroke="#2a1418" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- Kajal Lined Eyes -->
+    <ellipse cx="141" cy="144" rx="4" ry="3.5" fill="#2a1418"/>
+    <ellipse cx="179" cy="144" rx="4" ry="3.5" fill="#2a1418"/>
+    <path d="M135,145 Q141,148 147,144" stroke="#2a1418" stroke-width="1.5" fill="none"/>
+    <path d="M173,144 Q179,148 185,145" stroke="#2a1418" stroke-width="1.5" fill="none"/>
+
+    <!-- Red Pottu / Kumkum Bindi -->
+    <circle cx="160" cy="132" r="3.5" fill="#8e1b2e"/>
+
+    <!-- Gentle Smile -->
+    <path d="M148,172 Q160,182 172,172" stroke="#8e1b2e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Traditional Jimikki Earring Hints -->
+    <circle cx="114" cy="155" r="3" fill="#e8a317"/>
+    <polygon points="112,159 116,159 114,166" fill="#ffd56b"/>
+    <circle cx="206" cy="155" r="3" fill="#e8a317"/>
+    <polygon points="204,159 208,159 206,166" fill="#ffd56b"/>
+  </g>
+
+  <!-- Role Badge Pin -->
+  <g transform="translate(160, 290)">
+    <rect x="-55" y="-12" width="110" height="24" rx="12" fill="#e8a317" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="0" y="4" fill="#2a1418" font-family="'Karla', sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">DÉCOR LEAD</text>
+  </g>
+</svg>

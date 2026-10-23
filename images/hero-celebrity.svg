@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b1528"/>
+      <stop offset="60%" stop-color="#2a1418"/>
+      <stop offset="100%" stop-color="#14070a"/>
+    </linearGradient>
+    <linearGradient id="spotlightGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd56b" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="goldGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="50%" stop-color="#e8a317"/>
+      <stop offset="100%" stop-color="#cf8f10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="560" rx="20" fill="url(#bgGrad3)"/>
+
+  <!-- Spotlights -->
+  <polygon points="50,0 0,380 180,380" fill="url(#spotlightGrad)"/>
+  <polygon points="350,0 220,380 400,380" fill="url(#spotlightGrad)"/>
+
+  <!-- Star Emblems / Sparkles -->
+  <g fill="#ffd56b" opacity="0.8">
+    <path d="M120,130 Q120,150 140,150 Q120,150 120,170 Q120,150 100,150 Q120,150 120,130 Z"/>
+    <path d="M290,110 Q290,125 305,125 Q290,125 290,140 Q290,125 275,125 Q290,125 290,110 Z"/>
+    <path d="M80,260 Q80,270 90,270 Q80,270 80,280 Q80,270 70,270 Q80,270 80,260 Z"/>
+    <path d="M320,250 Q320,262 332,262 Q320,262 320,274 Q320,262 308,262 Q320,262 320,250 Z"/>
+  </g>
+
+  <!-- Stage & Artist Mic / Spotlight Silhouette -->
+  <g transform="translate(200, 260)">
+    <circle cx="0" cy="-60" r="30" fill="url(#goldGrad3)"/>
+    <path d="M-40,10 C-40,-30 40,-30 40,10 L30,40 L-30,40 Z" fill="url(#goldGrad3)"/>
+    <!-- Mic icon -->
+    <rect x="-8" y="-72" width="16" height="26" rx="8" fill="#2a1418"/>
+    <path d="M-13,-60 C-13,-45 13,-45 13,-60" fill="none" stroke="#2a1418" stroke-width="3"/>
+    <line x1="0" y1="-45" x2="0" y2="-32" stroke="#2a1418" stroke-width="3"/>
+  </g>
+
+  <!-- Tag Pill -->
+  <rect x="30" y="32" width="158" height="32" rx="16" fill="rgba(255,255,255,0.18)" backdrop-filter="blur(4px)"/>
+  <text x="109" y="52" fill="#ffffff" font-family="'Karla', sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">CELEBRITY &amp; VIPS</text>
+
+  <!-- Caption text -->
+  <text x="32" y="475" fill="url(#goldGrad3)" font-family="'Fraunces', serif" font-size="24" font-weight="700">Star Appearances &amp;</text>
+  <text x="32" y="505" fill="#ffffff" font-family="'Fraunces', serif" font-size="24" font-weight="700">Live Entertainment</text>
+  <text x="32" y="530" fill="rgba(255,255,255,0.75)" font-family="'Karla', sans-serif" font-size="14">Kollywood Artists &amp; Performers</text>
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffdfa"/>
+      <stop offset="100%" stop-color="#f5ecdb"/>
+    </linearGradient>
+    <linearGradient id="tnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdf1dc"/>
+      <stop offset="100%" stop-color="#f4dfb5"/>
+    </linearGradient>
+    <linearGradient id="pinRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bd2840"/>
+      <stop offset="100%" stop-color="#8e1b2e"/>
+    </linearGradient>
+    <linearGradient id="pinGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd56b"/>
+      <stop offset="100%" stop-color="#e8a317"/>
+    </linearGradient>
+    <filter id="mapShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#8e1b2e" flood-opacity="0.1"/>
+    </filter>
+    <filter id="pinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="420" rx="16" fill="url(#mapBgGrad)"/>
+
+  <!-- Subtle Grid lines / Coordinate lattice -->
+  <g stroke="#e2d2ba" stroke-width="0.8" opacity="0.4" stroke-dasharray="4,6">
+    <line x1="60" y1="0" x2="60" y2="420"/>
+    <line x1="180" y1="0" x2="180" y2="420"/>
+    <line x1="300" y1="0" x2="300" y2="420"/>
+    <line x1="420" y1="0" x2="420" y2="420"/>
+    <line x1="540" y1="0" x2="540" y2="420"/>
+    <line x1="0" y1="80" x2="600" y2="80"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="280" x2="600" y2="280"/>
+    <line x1="0" y1="360" x2="600" y2="360"/>
+  </g>
+
+  <!-- Bay of Bengal decorative ocean ripples (East) -->
+  <path d="M 460,90 Q 480,85 500,90 T 540,90 M 470,140 Q 490,135 510,140 T 550,140 M 450,220 Q 475,215 500,220 T 540,220 M 420,300 Q 445,295 470,300 T 510,300" fill="none" stroke="#d5c4aa" stroke-width="1.2" opacity="0.5"/>
+  <text x="500" y="250" fill="#a89578" font-family="'Karla', sans-serif" font-size="11" font-weight="600" letter-spacing="2" transform="rotate(25, 500, 250)">BAY OF BENGAL</text>
+
+  <!-- Stylized Tamil Nadu Map Silhouette -->
+  <g filter="url(#mapShadow)">
+    <path d="M 330,45
+             C 380,50 420,85 410,105
+             C 395,125 400,165 415,195
+             C 425,215 440,240 435,260
+             C 428,285 390,310 380,335
+             C 370,360 350,385 330,395
+             C 310,385 295,350 280,330
+             C 255,295 240,270 230,245
+             C 215,220 220,195 240,170
+             C 255,150 260,110 285,80
+             Z"
+          fill="url(#tnGrad)" stroke="#cfa664" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Connection Routes Between Hubs -->
+  <g stroke="#8e1b2e" stroke-width="1.8" stroke-dasharray="5,4" opacity="0.55" fill="none">
+    <!-- Chennai to Salem -->
+    <path d="M 395,95 Q 350,135 305,160"/>
+    <!-- Chennai to Trichy -->
+    <path d="M 395,95 Q 370,170 340,230"/>
+    <!-- Salem to Coimbatore -->
+    <path d="M 305,160 Q 275,190 250,220"/>
+    <!-- Salem to Trichy -->
+    <path d="M 305,160 Q 320,195 340,230"/>
+    <!-- Trichy to Madurai -->
+    <path d="M 340,230 Q 325,270 310,305"/>
+    <!-- Coimbatore to Madurai -->
+    <path d="M 250,220 Q 280,265 310,305"/>
+  </g>
+
+  <!-- City Hub Pins & Labels -->
+
+  <!-- 1. CHENNAI (Headquarters & Design Studio) -->
+  <g transform="translate(395, 95)" filter="url(#pinShadow)">
+    <circle r="14" fill="#8e1b2e" opacity="0.2"/>
+    <circle r="8" fill="url(#pinRed)"/>
+    <circle r="3.5" fill="#ffffff"/>
+    <rect x="16" y="-14" width="138" height="28" rx="6" fill="#8e1b2e" opacity="0.95"/>
+    <text x="26" y="4" fill="#ffffff" font-family="'Fraunces', serif" font-size="12" font-weight="700">Chennai (HQ)</text>
+    <text x="105" y="4" fill="#ffd56b" font-family="'Karla', sans-serif" font-size="9" font-weight="700">★ CORE</text>
+  </g>
+
+  <!-- 2. COIMBATORE -->
+  <g transform="translate(250, 220)" filter="url(#pinShadow)">
+    <circle r="11" fill="#e8a317" opacity="0.25"/>
+    <circle r="6.5" fill="url(#pinGold)"/>
+    <circle r="2.8" fill="#3a1c0d"/>
+    <rect x="-105" y="-12" width="92" height="24" rx="5" fill="#ffffff" stroke="#cfa664" stroke-width="1.2"/>
+    <text x="-95" y="4" fill="#2d221e" font-family="'Karla', sans-serif" font-size="11" font-weight="700">Coimbatore</text>
+  </g>
+
+  <!-- 3. SALEM -->
+  <g transform="translate(305, 160)" filter="url(#pinShadow)">
+    <circle r="6" fill="#8e1b2e"/>
+    <circle r="2.5" fill="#ffffff"/>
+    <rect x="-68" y="-26" width="60" height="22" rx="4" fill="#ffffff" stroke="#e2d2ba" stroke-width="1"/>
+    <text x="-58" y="-11" fill="#2d221e" font-family="'Karla', sans-serif" font-size="10" font-weight="700">Salem</text>
+  </g>
+
+  <!-- 4. TRICHY (Central Hub) -->
+  <g transform="translate(340, 230)" filter="url(#pinShadow)">
+    <circle r="6" fill="#1f4d3a"/>
+    <circle r="2.5" fill="#ffffff"/>
+    <rect x="14" y="-10" width="56" height="22" rx="4" fill="#ffffff" stroke="#e2d2ba" stroke-width="1"/>
+    <text x="22" y="5" fill="#1f4d3a" font-family="'Karla', sans-serif" font-size="10" font-weight="700">Trichy</text>
+  </g>
+
+  <!-- 5. MADURAI (Temple & Heritage Hub) -->
+  <g transform="translate(310, 305)" filter="url(#pinShadow)">
+    <circle r="11" fill="#e8a317" opacity="0.25"/>
+    <circle r="6.5" fill="url(#pinGold)"/>
+    <circle r="2.8" fill="#3a1c0d"/>
+    <rect x="14" y="-12" width="76" height="24" rx="5" fill="#ffffff" stroke="#cfa664" stroke-width="1.2"/>
+    <text x="24" y="4" fill="#2d221e" font-family="'Karla', sans-serif" font-size="11" font-weight="700">Madurai</text>
+  </g>
+
+  <!-- Bottom Legend Banner -->
+  <g transform="translate(25, 365)">
+    <rect width="550" height="42" rx="8" fill="#ffffff" stroke="#e2d2ba" stroke-width="1"/>
+    <circle cx="24" cy="21" r="5" fill="#8e1b2e"/>
+    <text x="36" y="25" fill="#4d3e38" font-family="'Karla', sans-serif" font-size="11" font-weight="600">Headquarters</text>
+
+    <circle cx="130" cy="21" r="5" fill="#e8a317"/>
+    <text x="142" y="25" fill="#4d3e38" font-family="'Karla', sans-serif" font-size="11" font-weight="600">Major Regional Hubs</text>
+
+    <circle cx="280" cy="21" r="5" fill="#1f4d3a"/>
+    <text x="292" y="25" fill="#4d3e38" font-family="'Karla', sans-serif" font-size="11" font-weight="600">Central Staging Units</text>
+
+    <text x="440" y="25" fill="#8e1b2e" font-family="'Karla', sans-serif" font-size="11" font-weight="700">⚡ 38 Districts Covered</text>
+  </g>
+</svg>

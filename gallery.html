@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | TSK Entertainments - Event Showcase</title>
+  <meta name="description" content="View our portfolio of majestic wedding mandaps, vibrant birthday themes, elegant corporate setups, and star moments crafted by TSK Entertainments across Tamil Nadu.">
+  <meta name="theme-color" content="#fbf6ec">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Shared Header (Injected via js/script.js) -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Main Content Container -->
+  <main id="main-content" class="main-content">
+
+    <!-- 1. Page Hero / Header -->
+    <div class="container">
+      <section class="page-hero" aria-labelledby="gallery-hero-title">
+        <span class="badge badge-primary">Visual Portfolio</span>
+        <h1 id="gallery-hero-title" class="page-hero-title">Our Event Gallery</h1>
+        <p class="page-hero-desc">
+          Immerse yourself in our recent celebrations, magical floral mandaps, ambient evening lighting, and joyful moments captured across Tamil Nadu.
+        </p>
+      </section>
+    </div>
+
+    <!-- 2. Interactive Gallery Section (Filter Bar + Responsive Image Grid) -->
+    <section class="section gallery-section" aria-label="Photo Gallery">
+      <div class="container">
+
+        <!-- Category Filter Buttons -->
+        <div class="gallery-filter-bar" role="toolbar" aria-label="Filter gallery by category">
+          <button type="button" class="gallery-filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="gallery-filter-btn" data-filter="weddings" aria-pressed="false">Weddings</button>
+          <button type="button" class="gallery-filter-btn" data-filter="decor" aria-pressed="false">D&eacute;cor</button>
+          <button type="button" class="gallery-filter-btn" data-filter="birthdays" aria-pressed="false">Birthdays</button>
+          <button type="button" class="gallery-filter-btn" data-filter="corporate" aria-pressed="false">Corporate</button>
+        </div>
+
+        <!-- Dynamic Responsive Image Grid (Populated via js/script.js) -->
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+          <!-- Gallery items rendered dynamically from GALLERY_ITEMS array -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Accessible Lightbox Dialog Modal -->
+    <dialog id="gallery-lightbox" class="gallery-lightbox" closedby="any" aria-label="Photo Lightbox" aria-modal="true">
+      <div class="lightbox-content-box">
+        <!-- Close Button -->
+        <button type="button" id="lightbox-close" class="lightbox-btn lightbox-btn-close" aria-label="Close photo lightbox" title="Close (Escape)">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+
+        <!-- Previous Button -->
+        <button type="button" id="lightbox-prev" class="lightbox-btn lightbox-btn-prev" aria-label="Previous photo" title="Previous (Left Arrow)">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+        </button>
+
+        <!-- Next Button -->
+        <button type="button" id="lightbox-next" class="lightbox-btn lightbox-btn-next" aria-label="Next photo" title="Next (Right Arrow)">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+
+        <!-- Media Container -->
+        <div class="lightbox-media-container">
+          <img id="lightbox-img" class="lightbox-img" src="" alt="" width="800" height="600">
+        </div>
+
+        <!-- Metadata Bar -->
+        <div class="lightbox-meta-bar">
+          <div class="lightbox-meta-top">
+            <span id="lightbox-badge" class="badge badge-primary">Category</span>
+            <span id="lightbox-counter" class="lightbox-counter">1 / 12</span>
+          </div>
+          <h2 id="lightbox-title" class="lightbox-title">Photo Title</h2>
+          <p id="lightbox-caption" class="lightbox-caption">Photo description and location details.</p>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <!-- Shared Footer (Injected via js/script.js) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared Logic & Component Injector -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

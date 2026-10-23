@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan My Event - Interactive Quotation Builder | TSK Entertainments</title>
+  <meta name="description" content="Configure your celebration step-by-step with TSK Entertainments. Choose event type, guest scale, curated packages, and entertainment add-ons for instant WhatsApp quotations.">
+  <meta name="theme-color" content="#fbf6ec">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Shared Header (Injected via js/script.js) -->
+  <header id="site-header" class="site-header"></header>
+
+  <!-- Main Content Container -->
+  <main id="main-content" class="main-content">
+    <div class="container">
+      <!-- 1. Page Hero / Heading -->
+      <section class="page-hero contact-page-hero">
+        <span class="badge badge-primary">Quick Estimate</span>
+        <h1 class="page-hero-title">Plan My Event</h1>
+        <p class="page-hero-desc">
+          Choose your event details below to get an instant customized quotation via WhatsApp.
+        </p>
+      </section>
+
+      <!-- 2. Interactive Planner Section -->
+      <section class="planner-section" aria-label="Event Configuration Builder">
+        <div class="planner-layout">
+          <!-- Left Column: Step-by-Step Form -->
+          <div class="planner-steps-container">
+            <!-- Interactive Stepper Progress Indicator -->
+            <div class="planner-stepper" role="navigation" aria-label="Planner Progress Steps">
+              <button type="button" class="stepper-step active" data-step-target="1" aria-current="step">
+                <span class="stepper-bubble">1</span>
+                <span class="stepper-label">Celebration</span>
+              </button>
+              <div class="stepper-line" aria-hidden="true"></div>
+              <button type="button" class="stepper-step" data-step-target="2">
+                <span class="stepper-bubble">2</span>
+                <span class="stepper-label">Scale &amp; Tier</span>
+              </button>
+              <div class="stepper-line" aria-hidden="true"></div>
+              <button type="button" class="stepper-step" data-step-target="3">
+                <span class="stepper-bubble">3</span>
+                <span class="stepper-label">Add-ons</span>
+              </button>
+              <div class="stepper-line" aria-hidden="true"></div>
+              <button type="button" class="stepper-step" data-step-target="4">
+                <span class="stepper-bubble">4</span>
+                <span class="stepper-label">Contact</span>
+              </button>
+            </div>
+            <div class="stepper-progress-bar-wrap" aria-hidden="true">
+              <div class="stepper-progress-bar" id="stepper-progress-bar" style="width: 25%;"></div>
+            </div>
+
+            <form id="event-planner-form" novalidate>
+              <!-- Live In-Form Feedback Banner -->
+              <div id="planner-form-status" class="contact-form-status" role="status" aria-live="polite"></div>
+
+              <!-- Step 1: Event & Location -->
+              <div class="planner-step-card active" id="step-category" data-step="1">
+                <div class="planner-step-header">
+                  <div class="step-number-badge" aria-hidden="true">1</div>
+                  <h2 class="planner-step-title">Celebration &amp; Date</h2>
+                </div>
+
+                <!-- Event Type Chips -->
+                <fieldset style="border: none; padding: 0; margin: 0;">
+                  <legend class="form-label">Event Category <span class="required-star">*</span></legend>
+                  <div class="planner-chips-grid">
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Wedding" checked>
+                      <span class="chip-icon" aria-hidden="true">💍</span>
+                      <span class="chip-title">Wedding</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Birthday / Anniversary">
+                      <span class="chip-icon" aria-hidden="true">🎂</span>
+                      <span class="chip-title">Birthday</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Corporate Event">
+                      <span class="chip-icon" aria-hidden="true">🏢</span>
+                      <span class="chip-title">Corporate</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Celebrity Night">
+                      <span class="chip-icon" aria-hidden="true">🌟</span>
+                      <span class="chip-title">Celebrity</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Theme Décor Only">
+                      <span class="chip-icon" aria-hidden="true">🌺</span>
+                      <span class="chip-title">Décor Only</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_event_type" value="Other">
+                      <span class="chip-icon" aria-hidden="true">🎈</span>
+                      <span class="chip-title">Other</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- Location & Date Fields -->
+                <div class="form-row" style="margin-top: 1rem;">
+                  <div class="form-group">
+                    <label for="planner_date" class="form-label">Event Date <span class="required-star">*</span></label>
+                    <input
+                      type="date"
+                      id="planner_date"
+                      name="planner_date"
+                      class="form-input"
+                      required
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="planner_city" class="form-label">City or Venue <span class="required-star">*</span></label>
+                    <input
+                      type="text"
+                      id="planner_city"
+                      name="planner_city"
+                      class="form-input"
+                      required
+                      placeholder="e.g. Chennai, Madurai, Coimbatore"
+                    >
+                  </div>
+                </div>
+
+                <div class="planner-step-nav">
+                  <span class="step-counter-text">Step 1 of 4</span>
+                  <button type="button" class="btn btn-primary btn-next-step" data-next="2">
+                    <span>Next: Scale &amp; Package &rarr;</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Scale & Package Tier -->
+              <div class="planner-step-card" id="step-scale" data-step="2">
+                <div class="planner-step-header">
+                  <div class="step-number-badge" aria-hidden="true">2</div>
+                  <h2 class="planner-step-title">Scale &amp; Package</h2>
+                </div>
+
+                <!-- Guest Count Chips -->
+                <fieldset style="border: none; padding: 0; margin: 0 0 1rem 0;">
+                  <legend class="form-label">Approx. Guests</legend>
+                  <div class="planner-chips-grid">
+                    <label class="chip-label">
+                      <input type="radio" name="planner_guests" value="50–150 (Intimate)">
+                      <span class="chip-title">50–150</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_guests" value="150–400 (Grand)" checked>
+                      <span class="chip-title">150–400</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_guests" value="400–1000 (Royal)">
+                      <span class="chip-title">400–1000</span>
+                    </label>
+
+                    <label class="chip-label">
+                      <input type="radio" name="planner_guests" value="1000+ (Mega Celebration)">
+                      <span class="chip-title">1000+</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- Package Choice Radios -->
+                <fieldset style="border: none; padding: 0; margin: 0;">
+                  <legend class="form-label">Package Tier</legend>
+                  <div class="planner-packages-grid">
+                    <label class="package-choice-card">
+                      <input type="radio" name="planner_package" value="Silver Package">
+                      <div class="package-choice-header">
+                        <span class="package-choice-title">Silver Package</span>
+                        <span class="badge badge-primary" style="font-size: 0.72rem;">From ₹2.5L</span>
+                      </div>
+                    </label>
+
+                    <label class="package-choice-card">
+                      <input type="radio" name="planner_package" value="Gold Package (★ Most Popular)" checked>
+                      <div class="package-choice-header">
+                        <span class="package-choice-title">Gold Package</span>
+                        <span class="badge badge-accent" style="font-size: 0.72rem;">★ Most Popular</span>
+                      </div>
+                    </label>
+
+                    <label class="package-choice-card">
+                      <input type="radio" name="planner_package" value="Platinum Luxury">
+                      <div class="package-choice-header">
+                        <span class="package-choice-title">Platinum Luxury</span>
+                        <span class="badge badge-green" style="font-size: 0.72rem;">From ₹11L</span>
+                      </div>
+                    </label>
+
+                    <label class="package-choice-card">
+                      <input type="radio" name="planner_package" value="Bespoke Custom">
+                      <div class="package-choice-header">
+                        <span class="package-choice-title">Bespoke Custom</span>
+                        <span class="badge" style="font-size: 0.72rem;">Flexible</span>
+                      </div>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div class="planner-step-nav">
+                  <button type="button" class="btn btn-secondary btn-prev-step" data-prev="1">
+                    <span>&larr; Back</span>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next-step" data-next="3">
+                    <span>Next: Add-ons &rarr;</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Special Add-ons & Entertainment -->
+              <div class="planner-step-card" id="step-addons" data-step="3">
+                <div class="planner-step-header">
+                  <div class="step-number-badge" aria-hidden="true">3</div>
+                  <h2 class="planner-step-title">Add-ons (Optional)</h2>
+                </div>
+
+                <div class="planner-addons-grid">
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="Theme Décor &amp; Stage Florals">
+                    <span class="addon-title">🌸 Floral Mandap &amp; Décor</span>
+                  </label>
+
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="Celebrity Singer / Live Fusion Band">
+                    <span class="addon-title">🎤 Celebrity Singer / Band</span>
+                  </label>
+
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="Celebrity Emcee / Stage Host">
+                    <span class="addon-title">🎙️ Celebrity Emcee / Host</span>
+                  </label>
+
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="DJ &amp; Intelligent Lighting Rig">
+                    <span class="addon-title">🎧 Wedding DJ &amp; Lighting</span>
+                  </label>
+
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="Royal Bridal / Groom Entry">
+                    <span class="addon-title">👑 Royal Bridal Entry</span>
+                  </label>
+
+                  <label class="addon-card">
+                    <input type="checkbox" name="planner_addons" value="4K Cinematic Film &amp; Drone Coverage">
+                    <span class="addon-title">📹 4K Video &amp; Drone</span>
+                  </label>
+                </div>
+
+                <div class="planner-step-nav">
+                  <button type="button" class="btn btn-secondary btn-prev-step" data-prev="2">
+                    <span>&larr; Back</span>
+                  </button>
+                  <button type="button" class="btn btn-primary btn-next-step" data-next="4">
+                    <span>Next: Contact Details &rarr;</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4: Client Contact Details & WhatsApp Submission -->
+              <div class="planner-step-card" id="step-contact" data-step="4">
+                <div class="planner-step-header">
+                  <div class="step-number-badge" aria-hidden="true">4</div>
+                  <h2 class="planner-step-title">Contact &amp; Submit</h2>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="planner_name" class="form-label">Full Name <span class="required-star">*</span></label>
+                    <input
+                      type="text"
+                      id="planner_name"
+                      name="planner_name"
+                      class="form-input"
+                      required
+                      autocomplete="name"
+                      placeholder="e.g. Anandha Krishnan"
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="planner_phone" class="form-label">Phone Number <span class="required-star">*</span></label>
+                    <input
+                      type="tel"
+                      id="planner_phone"
+                      name="planner_phone"
+                      class="form-input"
+                      required
+                      autocomplete="tel"
+                      inputmode="tel"
+                      placeholder="10-digit mobile number"
+                      aria-describedby="err-planner-phone"
+                    >
+                    <span class="error-msg" id="err-planner-phone">⚠️ Please enter a valid 10-digit number</span>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 0.85rem;">
+                  <label for="planner_notes" class="form-label">Notes / Preferences</label>
+                  <textarea
+                    id="planner_notes"
+                    name="planner_notes"
+                    class="form-textarea"
+                    rows="2"
+                    placeholder="Specific theme colors, timings, or questions..."
+                  ></textarea>
+                </div>
+
+                <div class="planner-step-nav">
+                  <button type="button" class="btn btn-secondary btn-prev-step" data-prev="3">
+                    <span>&larr; Back</span>
+                  </button>
+                  <button type="submit" class="btn btn-whatsapp-submit">
+                    <span>Get Quotation via WhatsApp</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.93 1.34-.49.06-1.12.08-3.6-0.95-3.17-1.31-5.21-4.52-5.37-4.73-.16-.21-1.28-1.7-1.28-3.24 0-1.54.81-2.3 1.1-2.61.29-.31.63-.39.84-.39.21 0 .42 0 .6.01.2.01.46-.07.72.54.26.63.9 2.19.98 2.35.08.16.13.35.03.56-.1.21-.16.34-.31.52-.16.18-.33.4-.47.54-.16.16-.33.34-.14.67.19.33.84 1.38 1.8 2.24 1.24 1.1 2.29 1.44 2.62 1.6.33.16.52.14.72-.08.2-.23.84-.98 1.07-1.31.23-.33.46-.28.77-.16.31.12 1.97.93 2.31 1.1.34.17.57.26.65.4.09.15.09.86-.15 1.53z"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Column: Live Sticky Summary Sidebar -->
+          <aside class="planner-summary-col" aria-label="Live Configuration Summary">
+            <div class="planner-summary-card" id="planner-summary-card">
+              <div class="planner-summary-header" id="planner-summary-toggle">
+                <div class="summary-header-main">
+                  <span class="badge badge-primary">Summary</span>
+                  <h3 class="planner-summary-title">Your Plan</h3>
+                </div>
+                <button type="button" class="summary-mobile-toggle-btn" id="summary-toggle-btn" aria-expanded="false" aria-controls="summary-items-wrap" aria-label="Toggle Summary Details">
+                  <span id="summary-toggle-label">View Summary</span>
+                  <svg class="summary-toggle-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg>
+                </button>
+              </div>
+
+              <div class="summary-items-collapsible" id="summary-items-wrap">
+                <div class="summary-items-list">
+                  <div class="summary-item">
+                    <span class="summary-label">Event</span>
+                    <span id="sum-event-type" class="summary-val">Wedding</span>
+                  </div>
+
+                  <div class="summary-item">
+                    <span class="summary-label">Package</span>
+                    <span id="sum-package" class="summary-val" style="color: var(--primary);">Gold Package (★ Most Popular)</span>
+                  </div>
+
+                  <div class="summary-item">
+                    <span class="summary-label">Guests</span>
+                    <span id="sum-guests" class="summary-val">150–400 (Grand)</span>
+                  </div>
+
+                  <div class="summary-item">
+                    <span class="summary-label">Date &amp; Venue</span>
+                    <span id="sum-date-city" class="summary-val">Tamil Nadu • Date: To Be Finalized</span>
+                  </div>
+
+                  <div class="summary-item">
+                    <span class="summary-label">Add-ons</span>
+                    <div id="sum-addons-chips" class="summary-addons-chips">
+                      <span class="summary-addon-tag" style="opacity: 0.6;">Standard package inclusions</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="summary-guarantee-pill">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  <div>
+                    ⚡ <strong>15–30 Min Response:</strong> Instant review &amp; reply on WhatsApp.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shared Footer (Injected via js/script.js) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Shared Logic & Component Injector -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
