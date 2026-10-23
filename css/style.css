@@ -249,6 +249,29 @@ a:hover {
   transform: translateY(-1px);
 }
 
+.btn-instagram {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff !important;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(220, 39, 67, 0.3);
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #e08423 0%, #d6582c 25%, #cc1733 50%, #bc1356 75%, #ac0878 100%);
+  color: #ffffff !important;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(220, 39, 67, 0.45);
+}
+
+.btn-instagram svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 /* --- Cards & Badges --- */
 .card {
   background-color: var(--surface);
@@ -1660,14 +1683,26 @@ a:hover {
 }
 
 .cta-contact-direct {
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   font-size: 0.95rem;
   color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .cta-contact-direct a {
   font-weight: 700;
   color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.cta-contact-direct a:hover {
+  color: var(--primary-hover);
 }
 
 /* ==========================================================================
