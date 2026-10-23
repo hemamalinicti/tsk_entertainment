@@ -29,16 +29,23 @@
   <!-- Main Content Container -->
   <main id="main-content" class="main-content">
 
-    <!-- 1. Page Hero / Header -->
-    <div class="container">
-      <section class="page-hero" aria-labelledby="services-hero-title">
-        <span class="badge badge-primary">Services &amp; Packages</span>
-        <h1 id="services-hero-title" class="page-hero-title">Services &amp; Curated Packages</h1>
-        <p class="page-hero-desc">
+    <!-- 1. Services Hero Banner Section with Background Image -->
+    <section class="services-hero-banner" aria-label="Services &amp; Packages Introduction">
+      <div class="services-hero-scrim" aria-hidden="true"></div>
+      <div class="container services-hero-content">
+        <span class="badge badge-hero-services">Services &amp; Packages</span>
+        <h1 id="services-hero-title" class="services-hero-title">Services &amp; Curated Packages</h1>
+        <p class="services-hero-desc">
           Bespoke event management, master stage décor, and transparent packages across Tamil Nadu.
         </p>
-      </section>
-    </div>
+
+        <!-- Quick Jump Anchor Bar -->
+        <nav class="anchor-nav-bar anchor-nav-bar-hero" aria-label="Page Sections Navigation">
+          <a href="#services-list" class="anchor-nav-pill active">All Services (6)</a>
+          <a href="services-packages.html#packages-list" class="anchor-nav-pill">Curated Packages (3)</a>
+        </nav>
+      </div>
+    </section>
 
     <!-- 2. Alternating Image-and-Text Service Rows Section -->
     <section class="section services-list-section" aria-label="Our Event Planning Services">

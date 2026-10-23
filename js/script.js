@@ -1682,12 +1682,14 @@
 
   // Service Cards Details Toggle (Shared across Home & Services Pages)
   function initHomeServiceCardToggles() {
-    const toggleButtons = document.querySelectorAll('.service-details-toggle');
+    const toggleButtons = document.querySelectorAll('.service-details-toggle[aria-controls]');
     if (!toggleButtons.length) return;
 
     function toggleCard(btn, forceState) {
       const targetId = btn.getAttribute('aria-controls');
+      if (!targetId) return;
       const detailsEl = document.getElementById(targetId);
+      if (!detailsEl) return;
       const card = btn.closest('.service-card');
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
       const shouldExpand = (typeof forceState === 'boolean') ? forceState : !isExpanded;
@@ -1696,13 +1698,13 @@
         btn.setAttribute('aria-expanded', 'false');
         const label = btn.querySelector('.toggle-label');
         if (label) label.textContent = 'View details';
-        if (detailsEl) detailsEl.hidden = true;
+        detailsEl.hidden = true;
         if (card) card.classList.remove('is-expanded');
       } else {
         btn.setAttribute('aria-expanded', 'true');
         const label = btn.querySelector('.toggle-label');
         if (label) label.textContent = 'Hide details';
-        if (detailsEl) detailsEl.hidden = false;
+        detailsEl.hidden = false;
         if (card) card.classList.add('is-expanded');
       }
     }
@@ -1719,7 +1721,7 @@
         if (topBar) {
           topBar.style.cursor = 'pointer';
           topBar.addEventListener('click', (e) => {
-            if (e.target.closest('button')) return;
+            if (e.target.closest('button') || e.target.closest('a')) return;
             toggleCard(btn);
           });
         }
@@ -1732,7 +1734,7 @@
         const hashId = window.location.hash.substring(1).toLowerCase();
         const card = document.getElementById(hashId) || document.getElementById(`card-${hashId}`);
         if (card && card.classList.contains('service-card')) {
-          const btn = card.querySelector('.service-details-toggle');
+          const btn = card.querySelector('.service-details-toggle[aria-controls]');
           if (btn) {
             toggleCard(btn, true);
             setTimeout(() => {
